@@ -35,3 +35,27 @@ func GetCategory(extension string) (string, bool) {
 	category, found := ExtensionMap[extension]
 	return category, found
 }
+
+func Organize(path string) error {
+
+	files, err := ScanDirectory(path)
+	if err != nil {
+		return err
+	}
+
+	for _, file := range files {
+
+		category, found := GetCategory(file.Extension)
+
+		if !found {
+			continue
+		}
+
+		err := MoveFile(path, file, category)
+		if err != nil {
+			return err
+		}
+	}
+
+	return nil
+}
