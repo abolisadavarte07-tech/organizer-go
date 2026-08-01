@@ -86,5 +86,10 @@ var Commands = map[string][]string{
     "Visual Basic",
     "Python",
     },
+
+	"program": {
+	"Executables",
+	"APKs",
+    },
 }
-	
+

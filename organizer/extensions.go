@@ -127,6 +127,20 @@ var Categories = []Category{
 		    ".vb",
 	    },
     },
+	{
+	    Name:   "Executables",
+    	Folder: "Executables",
+    	Extensions: []string{
+	    	".exe", ".msi",
+    	},
+    },
+    {
+    	Name:   "APKs",
+    	Folder: "APKs",
+    	Extensions: []string{
+  	    	".apk",
+	    },
+    },
 }
 
 var ExtensionMap = make(map[string]string)
