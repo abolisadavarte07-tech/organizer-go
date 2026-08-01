@@ -1,8 +1,9 @@
 package organizer
 
 import (
-	"os"
-	"path/filepath"
+    "fmt"
+    "os"
+    "path/filepath"
 )
 
 func ScanDirectory(path string) ([]FileInfo, error) {
@@ -36,7 +37,7 @@ func GetCategory(extension string) (string, bool) {
 	return category, found
 }
 
-func Organize(path string) error {
+func Organize(path string, command string) error {
 
 	files, err := ScanDirectory(path)
 	if err != nil {
@@ -51,6 +52,16 @@ func Organize(path string) error {
 			continue
 		}
 
+		allowed, ok := Commands[command]
+
+        if !ok {
+	        return fmt.Errorf("unsupported command: %s", command)
+        }
+
+        if !Contains(allowed, category) {
+	        continue
+        }
+
 		err := MoveFile(path, file, category)
 		if err != nil {
 			return err
@@ -58,4 +69,31 @@ func Organize(path string) error {
 	}
 
 	return nil
+}
+
+func CountMovableFiles(path string, command string) (int, error) {
+	files, err := ScanDirectory(path)
+	if err != nil {
+		return 0, err
+	}
+
+	count := 0
+
+	allowed, ok := Commands[command]
+	if !ok {
+		return 0, fmt.Errorf("unsupported command: %s", command)
+	}
+
+	for _, file := range files {
+		category, found := GetCategory(file.Extension)
+		if !found {
+			continue
+		}
+
+		if Contains(allowed, category) {
+			count++
+		}
+	}
+
+	return count, nil
 }

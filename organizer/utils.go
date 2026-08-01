@@ -25,3 +25,12 @@ func MoveFile(basePath string, file FileInfo, category string) error {
 	// Move file
 	return os.Rename(source, destination)
 }
+
+func Contains(slice []string, value string) bool {
+	for _, item := range slice {
+		if item == value {
+			return true
+		}
+	}
+	return false
+}
