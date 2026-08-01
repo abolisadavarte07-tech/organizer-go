@@ -12,10 +12,19 @@ func main() {
 
 	if len(os.Args) < 2 {
 		fmt.Println("Usage:")
-		fmt.Println("go run . all")
-		fmt.Println("go run . image")
-		fmt.Println("go run . audio")
-		fmt.Println("go run . pdf")
+        fmt.Println("go run . all")
+        fmt.Println("go run . safe")
+        fmt.Println("go run . image")
+        fmt.Println("go run . audio")
+        fmt.Println("go run . video")
+        fmt.Println("go run . text")
+        fmt.Println("go run . vector")
+        fmt.Println("go run . gif")
+        fmt.Println("go run . photoshop")
+        fmt.Println("go run . pdf")
+        fmt.Println("go run . python")
+        fmt.Println("go run . font")
+		fmt.Println("go run . office")
 		return
 	}
 

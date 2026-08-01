@@ -29,6 +29,41 @@ var Categories = []Category{
 			".py",
 		},
 	},
+	{
+	    Name:   "Word",
+	    Folder: "Word",
+	    Extensions: []string{
+		    ".doc", ".docx",
+	    },
+    },
+    {
+	    Name:   "PowerPoints",
+	    Folder: "PowerPoints",
+	    Extensions: []string{
+		    ".ppt", ".pptx",
+	    },
+    },
+    {
+	    Name:   "Excels",
+	    Folder: "Excels",
+	    Extensions: []string{
+		    ".xls", ".xlsx",
+	    },
+    },
+    {
+	    Name:   "Publisher",
+	    Folder: "Publisher",
+	    Extensions: []string{
+	    	".pub",
+	    },
+    },
+    {
+    	Name:   "Access",
+	    Folder: "Access",
+	    Extensions: []string{
+		    ".accdb",
+	    },
+    },
 }
 
 var ExtensionMap = make(map[string]string)
