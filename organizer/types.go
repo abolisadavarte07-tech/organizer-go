@@ -1,8 +1,12 @@
 package organizer
 
-// Category represents a file category.
 type Category struct {
 	Name       string
 	Folder     string
 	Extensions []string
+}
+
+type FileInfo struct {
+	Name      string
+	Extension string
 }
