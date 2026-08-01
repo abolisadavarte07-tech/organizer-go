@@ -73,5 +73,18 @@ var Commands = map[string][]string{
 	"Publisher",
 	"Access",
     },
-}
 
+	"code": {
+    "HTML",
+    "CSS",
+    "JavaScript",
+    "Java",
+    "PHP",
+    "C",
+    "C++",
+    "Swift",
+    "Visual Basic",
+    "Python",
+    },
+}
+	

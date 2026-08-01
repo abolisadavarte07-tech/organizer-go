@@ -25,6 +25,7 @@ func main() {
         fmt.Println("go run . python")
         fmt.Println("go run . font")
 		fmt.Println("go run . office")
+		fmt.Println("go run . code")
 		return
 	}
 
