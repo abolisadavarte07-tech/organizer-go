@@ -9,13 +9,20 @@ import (
 
 func main() {
 
-	files, err := organizer.ScanDirectory(".")
+	files, err := organizer.ScanDirectory("./TestFiles")
 
 	if err != nil {
 		log.Fatal(err)
 	}
 
 	for _, file := range files {
-		fmt.Printf("%s -> %s\n", file.Name, file.Extension)
+
+		category, found := organizer.GetCategory(file.Extension)
+
+		if found {
+			fmt.Printf("%-20s -> %s\n", file.Name, category)
+		} else {
+			fmt.Printf("%-20s -> Unsupported\n", file.Name)
+		}
 	}
 }

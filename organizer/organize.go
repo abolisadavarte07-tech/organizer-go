@@ -30,3 +30,8 @@ func ScanDirectory(path string) ([]FileInfo, error) {
 
 	return files, nil
 }
+
+func GetCategory(extension string) (string, bool) {
+	category, found := ExtensionMap[extension]
+	return category, found
+}
