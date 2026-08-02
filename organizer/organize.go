@@ -15,19 +15,27 @@ func ScanDirectory(path string) ([]FileInfo, error) {
 		return nil, err
 	}
 
+	var IgnoredFiles = map[string]bool{
+    	"Moved-Files-Log.txt": true,
+    }
+
 	for _, entry := range entries {
 
-		if entry.IsDir() {
-			continue
-		}
+    	if entry.IsDir() {
+	    	continue
+	    }
 
-		ext := filepath.Ext(entry.Name())
+    	if IgnoredFiles[entry.Name()] {
+	    	continue
+	    }
 
-		files = append(files, FileInfo{
-			Name:      entry.Name(),
-			Extension: ext,
-		})
-	}
+    	ext := filepath.Ext(entry.Name())
+
+    	files = append(files, FileInfo{
+	    	Name:      entry.Name(),
+	    	Extension: ext,
+	    })
+    }
 
 	return files, nil
 }
@@ -66,6 +74,11 @@ func Organize(path string, command string) error {
 		if err != nil {
 			return err
 		}
+
+		err = LogMove(path, file.Name, category)
+        if err != nil {
+        	return err
+        }
 	}
 
 	return nil

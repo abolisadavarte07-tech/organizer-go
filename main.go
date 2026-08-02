@@ -53,9 +53,20 @@ func main() {
 	    return
     }
 
+	fmt.Println()
+    fmt.Println("Organizing files...")
+    fmt.Println("----------------------------------------")
+
+
 	err = organizer.Organize("./TestFiles", command)
 
 	if err != nil {
-		log.Fatal(err)
-	}
+	log.Fatal(err)
+    }
+
+    fmt.Println("----------------------------------------")
+    fmt.Printf("Organization completed successfully!\n")
+    fmt.Printf("%d file(s) moved.\n", count)
+    fmt.Println("Log saved to: TestFiles/Moved-Files-Log.txt")
+    fmt.Println("----------------------------------------")
 }

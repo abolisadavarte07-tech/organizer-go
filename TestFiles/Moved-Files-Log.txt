@@ -1,0 +1,26 @@
+Main.java -> Java
+android.apk -> APKs
+app.php -> PHP
+app.swift -> Swift
+database.accdb -> Access
+design.psd -> Photoshop
+font.ttf -> Fonts
+hello.cpp -> C++
+index.html -> HTML
+installer.exe -> Executables
+logo.svg -> Vectors
+main.py -> Python
+marks.xlsx -> Excels
+movie.mp4 -> Videos
+notes.txt -> Texts
+photo.jpg -> Images
+program.c -> C
+project.vb -> Visual Basic
+publisher.pub -> Publisher
+report.docx -> Word
+resume.pdf -> PDFs
+script.js -> JavaScript
+setup.msi -> Executables
+slides.pptx -> PowerPoints
+song.mp3 -> Audio
+style.css -> CSS

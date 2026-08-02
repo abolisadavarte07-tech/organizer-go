@@ -4,17 +4,36 @@ var Commands = map[string][]string{
 
 	// Organize every supported category
 	"all": {
-		"Images",
-		"Audio",
-		"Videos",
-		"Vectors",
-		"GIFs",
-		"Photoshop",
-		"Texts",
-		"PDFs",
-		"Python",
-		"Fonts",
-	},
+        "Images",
+        "Audio",
+        "Videos",
+        "Vectors",
+        "GIFs",
+        "Photoshop",
+        "Texts",
+        "PDFs",
+        "Fonts",
+
+        "Word",
+        "PowerPoints",
+        "Excels",
+        "Publisher",
+        "Access",
+
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "Java",
+        "PHP",
+        "C",
+        "C++",
+        "Swift",
+        "Visual Basic",
+        "Python",
+
+        "Executables",
+        "APKs",
+    },
 
 	// Similar to the original Python "safe" command
 	"safe": {

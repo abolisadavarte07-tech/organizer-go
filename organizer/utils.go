@@ -54,7 +54,15 @@ func MoveFile(basePath string, file FileInfo, category string) error {
 	}
 
 	// Move file
-	return os.Rename(source, destination)
+    err := os.Rename(source, destination)
+    if err != nil {
+    	return err
+    }
+
+    // Display what was moved
+    fmt.Printf("✓ %-20s -> %s\n", file.Name, category)
+
+    return nil
 }
 
 func Contains(slice []string, value string) bool {

@@ -141,6 +141,41 @@ var Categories = []Category{
   	    	".apk",
 	    },
     },
+	{
+        Name:   "Videos",
+        Folder: "Videos",
+        Extensions: []string{
+            ".mp4", ".avi", ".mov", ".wmv",
+        },
+    },
+	{
+        Name:   "Texts",
+        Folder: "Texts",
+        Extensions: []string{
+            ".txt", ".rtf",
+        },
+    },
+	{
+        Name:   "Vectors",
+        Folder: "Vectors",
+        Extensions: []string{
+            ".svg", ".ai",
+        },
+    },
+	{
+        Name:   "Photoshop",
+        Folder: "Photoshop",
+        Extensions: []string{
+            ".psd",
+        },
+    },
+	{
+        Name:   "Fonts",
+        Folder: "Fonts",
+        Extensions: []string{
+            ".ttf", ".otf", ".woff", ".woff2",
+        },
+    },
 }
 
 var ExtensionMap = make(map[string]string)
